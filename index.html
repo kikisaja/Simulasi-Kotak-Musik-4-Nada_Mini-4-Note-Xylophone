@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini 4-Note Xylophone 🎼</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">kikisaja No. 131</span>
+            <h1>🎼 MINI 4-NOTE XYLOPHONE</h1>
+            <p>Mainkan tangga nada favoritmu lewat klik mouse atau tombol keyboard!</p>
+        </header>
+
+        <!-- Display Nada Aktif -->
+        <div class="note-display-box">
+            <span class="display-label">Nada Terakhir:</span>
+            <strong id="active-note-title">Siap Dimainkan! 🎵</strong>
+        </div>
+
+        <!-- Papan Bilah Xylophone (4 Nada) -->
+        <div class="xylophone-board">
+            <button type="button" class="xylo-bar note-c" data-note="C" data-freq="261.63" data-key="A">
+                <span class="bar-note">DO (C)</span>
+                <span class="bar-key-badge">A</span>
+            </button>
+
+            <button type="button" class="xylo-bar note-d" data-note="D" data-freq="293.66" data-key="S">
+                <span class="bar-note">RE (D)</span>
+                <span class="bar-key-badge">S</span>
+            </button>
+
+            <button type="button" class="xylo-bar note-e" data-note="E" data-freq="329.63" data-key="D">
+                <span class="bar-note">MI (E)</span>
+                <span class="bar-key-badge">D</span>
+            </button>
+
+            <button type="button" class="xylo-bar note-f" data-note="F" data-freq="349.23" data-key="F">
+                <span class="bar-note">FA (F)</span>
+                <span class="bar-key-badge">F</span>
+            </button>
+        </div>
+
+        <!-- Panduan Keyboard -->
+        <div class="key-guide">
+            ⌨️ <strong>Petunjuk Keyboard:</strong> Tekan tombol <kbd>A</kbd>, <kbd>S</kbd>, <kbd>D</kbd>, atau <kbd>F</kbd> di keyboardmu.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
