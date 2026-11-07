@@ -1,0 +1,178 @@
+:root {
+    --bg-main: #f472b6; /* Warna pink pop */
+    --card-bg: #ffffff;
+    --stroke-dark: #0f172a;
+    --pop-pink: #f472b6;
+    --pop-green: #4ade80;
+    --pop-yellow: #facc15;
+    --pop-blue: #38bdf8;
+    --pop-purple: #c084fc;
+    --text-dark: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- KARTU UTAMA WIDGET --- */
+.app-card {
+    background-color: var(--card-bg);
+    padding: 28px;
+    border-radius: 24px;
+    border: 4px solid var(--stroke-dark);
+    box-shadow: 10px 10px 0px var(--stroke-dark);
+    max-width: 460px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* --- HEADER --- */
+.app-header {
+    text-align: center;
+}
+
+.badge {
+    background-color: var(--pop-yellow);
+    color: var(--stroke-dark);
+    border: 2px solid var(--stroke-dark);
+    padding: 4px 12px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.app-header h1 {
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+
+.app-header p {
+    font-size: 0.8rem;
+    color: #475569;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* --- DISPLAY NADA AKTIF --- */
+.note-display-box {
+    background-color: #f8fafc;
+    border: 3px solid var(--stroke-dark);
+    padding: 10px 14px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 0px var(--stroke-dark);
+}
+
+.display-label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: #64748b;
+}
+
+.note-display-box strong {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--stroke-dark);
+}
+
+/* --- PAPAN BILAH XYLOPHONE --- */
+.xylophone-board {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px;
+    background-color: #0f172a;
+    border: 4px solid var(--stroke-dark);
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px var(--stroke-dark);
+    min-height: 220px;
+}
+
+.xylo-bar {
+    flex: 1;
+    border: 3px solid var(--stroke-dark);
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 6px;
+    box-shadow: 3px 3px 0px var(--stroke-dark);
+    transition: transform 0.1s ease, filter 0.1s ease;
+    outline: none;
+}
+
+/* Ukuran bertingkat sesuai tangga nada (C paling panjang, F paling pendek) */
+.xylo-bar.note-c { background-color: var(--pop-pink); height: 180px; }
+.xylo-bar.note-d { background-color: var(--pop-yellow); height: 165px; }
+.xylo-bar.note-e { background-color: var(--pop-green); height: 150px; }
+.xylo-bar.note-f { background-color: var(--pop-blue); height: 135px; }
+
+.bar-note {
+    font-weight: 900;
+    font-size: 0.85rem;
+    color: var(--stroke-dark);
+}
+
+.bar-key-badge {
+    background-color: #ffffff;
+    border: 2px solid var(--stroke-dark);
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 0.75rem;
+    color: var(--stroke-dark);
+    box-shadow: 1px 1px 0px var(--stroke-dark);
+}
+
+/* Efek saat dipukul/ditekan */
+.xylo-bar.active,
+.xylo-bar:active {
+    transform: translateY(6px) scale(0.96);
+    filter: brightness(1.2);
+    box-shadow: 1px 1px 0px var(--stroke-dark);
+}
+
+/* --- PANDUAN KEYBOARD --- */
+.key-guide {
+    background-color: #f1f5f9;
+    border: 2px solid var(--stroke-dark);
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-align: center;
+    color: #334155;
+}
+
+kbd {
+    background-color: var(--pop-purple);
+    color: #ffffff;
+    border: 1px solid var(--stroke-dark);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-weight: 900;
+    font-family: monospace;
+}
